@@ -1,3 +1,6 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
 // Package imports:
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
@@ -9,7 +12,12 @@ import 'logger.dart';
 mixin Base<T> {
   final Logger log = getLogger(T.toString());
 
-  void changeBaseOption(BaseOptions baseOptions) {
+  void silentlyHandleError(Error err) {
+    debugPrint('silently handling the following error: ');
+    log.e(err);
+  }
+
+  void changeDioBaseOption(BaseOptions baseOptions) {
     RequestHelper.setBaseOptions = baseOptions;
   }
 
