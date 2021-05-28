@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class RemoveScrollEffect extends ScrollBehavior {
+class RemoveScrollEffectBehaviour extends ScrollBehavior {
   @override
   Widget buildViewportChrome(
     BuildContext context,
@@ -8,5 +8,18 @@ class RemoveScrollEffect extends ScrollBehavior {
     AxisDirection axisDirection,
   ) {
     return child;
+  }
+}
+
+class RemoveScrollEffect extends StatelessWidget {
+  final Widget child;
+
+  const RemoveScrollEffect({Key? key, required this.child}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return ScrollConfiguration(
+      behavior: RemoveScrollEffectBehaviour(),
+      child: child,
+    );
   }
 }
