@@ -7,3 +7,4 @@ export 'base/base.dart';
 export 'base/logger.dart';
 export 'base/dio.dart';
 export 'utilities/network_aware_mixin.dart';
+export 'utilities/remove_scroll_effect.dart';
