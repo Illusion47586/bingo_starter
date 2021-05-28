@@ -1,14 +1,25 @@
 # bingo_starter
 
-A new Flutter package project.
+A Flutter Starter Package with some simple but handy utilities
+* Network aware mixin
+* logger (Custom logger from [here](https://www.filledstacks.com/snippet/a-guide-to-setting-up-better-logging-in-flutter/))
+* network helper (get/post/download image using dio)
+* logger and network helper are also wrapped in a simple mixin
+* json annotation (you don't need to import it in your pubspec again, it is already there in this package, but you would need to import [`json_serializable`](https://pub.dev/packages/json_serializable/install))
+* removing that weird material scroll effect 
 
-## Getting Started
+## Installation
+Put this in your `pubspec.yaml` dependencies
+``` yaml
+bingo_starter:
+    git:
+      url: git@github.com:Illusion47586/bingo_starter.git
+      ref: master
+```
+and add this line for importing
+``` dart
+import 'package:bingo_starter/bingo_starter.dart';
+```
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Contributions
+Contributions are welcome, just post the issue and comment if you are working on it.
