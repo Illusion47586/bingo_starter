@@ -1,0 +1,22 @@
+---
+name: bingo_starter
+description: Starter package for Flutter projects.
+version: 0.0.1
+homepage: null
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+dependencies:
+  cross_connectivity: ^3.0.2
+  dio: ^4.0.0
+  flutter:
+    sdk: flutter
+  json_annotation: ^4.0.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  import_sorter: ^4.4.2
+  json_serializable: ^4.1.0
+  logger: ^1.0.0
+  pretty_dio_logger: ^1.1.1
+flutter: null
