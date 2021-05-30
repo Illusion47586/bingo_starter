@@ -192,7 +192,7 @@ packages:
     source: hosted
     version: "2.0.0"
   pretty_dio_logger:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: pretty_dio_logger
       url: "https://pub.dartlang.org"
