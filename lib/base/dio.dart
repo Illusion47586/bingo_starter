@@ -22,7 +22,11 @@ class RequestHelper {
     Options? options,
     void Function(int, int)? onReceiveProgress,
   }) async {
-    final response = await dio.getUri(uri);
+    final response = await dio.getUri(
+      uri,
+      options: options,
+      onReceiveProgress: onReceiveProgress,
+    );
     try {
       if (response.statusCode == 200) {
         return response.data;
