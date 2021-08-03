@@ -6,7 +6,6 @@ class RequestHelper {
   static Dio dio = Dio(BaseOptions(connectTimeout: 10000))
     ..interceptors.add(
       PrettyDioLogger(
-        requestHeader: true,
         request: false,
         requestBody: true,
         responseBody: false,
