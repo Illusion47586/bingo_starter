@@ -62,6 +62,28 @@ class RequestHelper {
     }
   }
 
+  static Future<dynamic> deleteRequest({
+    required Uri uri,
+    dynamic data,
+    Options? options,
+    CancelToken? cancelToken,
+  }) async {
+    final response = await dio.deleteUri(
+      uri,
+      data: data,
+      options: options,
+      cancelToken: cancelToken,
+    );
+    try {
+      if (response.statusCode == 200) {
+        return response.data;
+      } else
+        return false;
+    } catch (e) {
+      return false;
+    }
+  }
+
   static Future<bool> downloadImage({
     required String url,
     required String savePath,

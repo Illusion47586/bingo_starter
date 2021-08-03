@@ -29,6 +29,12 @@ mixin Base<T> {
 
   final Future<dynamic> Function({
     required Uri uri,
+    Options? options,
+    CancelToken? cancelToken,
+  }) deleteRequestUsingURI = RequestHelper.deleteRequest;
+
+  final Future<dynamic> Function({
+    required Uri uri,
     dynamic data,
     Options? options,
     CancelToken? cancelToken,
