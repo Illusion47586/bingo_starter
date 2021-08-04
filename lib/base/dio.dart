@@ -1,4 +1,6 @@
 // Package imports:
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -70,7 +72,7 @@ class RequestHelper {
   }) async {
     final response = await dio.deleteUri(
       uri,
-      data: data,
+      data: data != null ? jsonEncode(data) : null,
       options: options,
       cancelToken: cancelToken,
     );
@@ -103,7 +105,7 @@ class RequestHelper {
       cancelToken: cancelToken,
       deleteOnError: deleteOnError,
       lengthHeader: lengthHeader,
-      data: data,
+      data: data != null ? jsonEncode(data) : null,
       options: options,
     );
     try {
